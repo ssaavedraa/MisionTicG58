@@ -1,6 +1,8 @@
 footer{
+    margin-top:  30px;
     color: gray;
     font-size: 10px;
+    text-align: center;
 }
 
 .btn:hover{
@@ -17,4 +19,9 @@ footer{
     display: block;
     align-items: center;
     justify-content: center;
+}   
+
+.btn{
+    width: 150px;
+    margin: 5px;
 }
