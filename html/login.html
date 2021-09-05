@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 
 <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title> ¡TIENDA MASTER!</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title> ¡TIENDA MASTER!</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-</head>
-
-<body>
-    <h1>BIENVENIDOS A LA TIENDA MASTER</h1>
-    <div>
-        <form>
-            <label id="usuario_etiqueta">Usuario</label>
-            <input type="text" name="usuario" id="usuario_text" size="50" placeholder="Escriba su Usuario">
-            <label>Contraseña</label>
-            <input type="password" id="contrasena_text" size="50" placeholder="Escriba su Contraseña">
-            
-            <button type="submit">Aceptar</button>
-            <button type="reset"> Cancelar</button>
-        </form>
-    </div>
-</body>
-<footer>
-    <p> Desarrollado por: </p>
-</footer>
-
+    <body>
+        
+        <div class="formulario">
+            <h1 class="titulo"> BIENVENIDOS A LA TIENDA MASTER</h1>
+            <form>
+                <label id="usuario_etiqueta">Usuario</label>
+                <input class="form-control" type="text" name="usuario" id="usuario_text" size="50" placeholder="Escriba su Usuario">
+                <label>Contraseña</label>
+                <input class="form-control" type="password" id="contrasena_text" size="50" placeholder="Escriba su Contraseña">
+                
+                <button class="btn btn-secondary" type="submit">Aceptar</button>
+                <button type="reset"> Cancelar</button>
+            </form>
+        </div>
+    </body>
+    <footer>
+        <p> Desarrollado por: </p>
+    </footer>
 </html>
