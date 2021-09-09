@@ -23,5 +23,9 @@ footer{
 
 .btn{
     width: 150px;
-    margin: 5px;
+    margin: 5px;    
+}
+
+input{
+    margin: 30px;
 }
