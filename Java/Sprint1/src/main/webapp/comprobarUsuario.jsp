@@ -14,28 +14,24 @@
 		
 		Class.forName("com.mysql.jdbc.Driver");		
 		Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","santiago","Vape2018!");
-		
-		String strSQL = "SELECT * FROM usuarios WHERE usuario = ? AND password = ?";
-		PreparedStatement ps = conexion.prepareStatement(strSQL);
-		
-		ps.setString(1, usuario);
-		ps.setString(2, password);
-		
-		
-		ResultSet result = ps.executeQuery();
-		out.println(result.next());
-		
-		int i = 0;
-		
-		while(result.next()){
-			i++;
-		}
-		
-		if(i == 0){
+				
+		try{
+			String strSQL = "SELECT * FROM usuarios WHERE usuario = ? AND password = ?";
+			PreparedStatement ps = conexion.prepareStatement(strSQL);
+			
+			ps.setString(1, usuario);
+			ps.setString(2, password);
+			
+			ResultSet result = ps.executeQuery();
+			
+			int i = 0;
+			out.println("Password: " + result.getString(4));
+			out.println("User: " + result.getString(5));
+			
 			response.sendRedirect("index.html");
 		}
-		else{
-			out.println("Usuario y/o contraseña incorrecto");
+		catch(Exception e){
+			out.println("Usuario y/o contraseña incorrectos");
 		}
 	%>
 </body>
