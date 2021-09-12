@@ -11,27 +11,32 @@
 	<%
 		String usuario = request.getParameter("usuario");
 		String password = request.getParameter("password");
+		Connection conexion = null;
+		int loginResult = 0;
 		
 		Class.forName("com.mysql.jdbc.Driver");		
-		Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","santiago","Vape2018!");
-				
-		try{
-			String strSQL = "SELECT * FROM usuarios WHERE usuario = ? AND password = ?";
-			PreparedStatement ps = conexion.prepareStatement(strSQL);
-			
-			ps.setString(1, usuario);
-			ps.setString(2, password);
-			
-			ResultSet result = ps.executeQuery();
-			
-			int i = 0;
-			out.println("Password: " + result.getString(4));
-			out.println("User: " + result.getString(5));
-			
-			response.sendRedirect("index.html");
+		conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","santiago","Vape2018!");
+		
+		String strSQL = "SELECT * FROM usuarios WHERE usuario = ? AND password = ?";
+		PreparedStatement ps = conexion.prepareStatement(strSQL);
+		
+		ps.setString(1, usuario);
+		ps.setString(2, password);
+		
+		ResultSet result = ps.executeQuery();
+		
+		int i = 0;
+		
+		while (result.next()){
+			i++;
 		}
-		catch(Exception e){
-			out.println("Usuario y/o contraseña incorrectos");
+		
+		if (i == 1){
+			response.sendRedirect("usuario.html");
+		}
+		else{
+			loginResult = 1;
+			response.sendRedirect("loginError.jsp");
 		}
 	%>
 </body>
