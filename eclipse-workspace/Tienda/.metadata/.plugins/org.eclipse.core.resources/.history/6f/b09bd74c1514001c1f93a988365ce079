@@ -1,0 +1,21 @@
+package co.tiendamaster.controlador;
+
+import javax.servlet.http.HttpServlet;
+
+/**
+ * Servlet implementation class ControladorUsuario
+ */
+public class ControladorUsuario extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public ControladorUsuario() {
+        super();
+      
+    }
+    
+    pr
+
+}

@@ -1,0 +1,47 @@
+package co.tiendamaster.controlador;
+
+import java.io.IOException;
+import co.tiendamaster.modelo.*;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+ * Servlet implementation class ControladorUsuario
+ */
+public class ControladorUsuario extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	UsuariosDAO dao= new UsuariosDAO();
+	Usuarios user= new Usuarios();
+    public ControladorUsuario() {
+        super();
+      
+    }
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String action = req.getParameter("accion");
+		if (action!=null){
+			String usuario = req.getParameter("usuario");
+			String contrasena = req.getParameter("contrasena");
+			user.setNombreUsuario(usuario);
+			user.setPassword(contrasena);
+			n=dao.login(user);
+			if (n==1) {
+				
+				resp.sendRedirect("usuario.html");
+			}else {
+				out.println("pilas");
+			}		
+		}	
+	}
+		super.doPost(req, resp);
+	}
+    
+    
+
+	
+   
+
+}
