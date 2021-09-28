@@ -31,8 +31,6 @@
 	} catch (Exception e) {
 		out.println(e);
 	}
-	// insert into usuarios (cedula_usuario, email_usuario, nombre_usuario, password, usuario) values (1020830069, 'santi@go.com', 'santiago', 'Vape2018!', 'ssaavedraa');
-//	response.sendRedirect("usuario.html");
 	%>
 </body>
 </html>
