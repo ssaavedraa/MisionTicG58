@@ -40,10 +40,10 @@
 	try{
 		Class.forName("com.mysql.cj.jdbc.Driver");		
 		conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","root","12345678");
-		PreparedStatement ps = conexion.prepareStatement("select * from usuarios where cedula_usuario = ? or nombre_usuario = ? or email_usuario = ? or usuario = ?");
+		PreparedStatement ps = conexion.prepareStatement("select * from usuarios where cedula_usuario = ? or email_usuario = ? or nombre_usuario = ? or usuario = ?");
 		ps.setString(1,cedula);
-		ps.setString(2,cedula);
-		ps.setString(3,cedula);
+		ps.setString(2,email);
+		ps.setString(3,nombre);
 		ps.setString(4,usuario);
 		ResultSet result = ps.executeQuery();
 		int i = 0; 
