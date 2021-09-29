@@ -15,7 +15,7 @@
 		int loginResult = 0;
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");		
-			conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","santiago","Vape2018!");
+			conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","root","12345678");
 			
 			String strSQL = "SELECT * FROM usuarios WHERE usuario = ? AND password = ?";
 			PreparedStatement ps = conexion.prepareStatement(strSQL);

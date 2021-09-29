@@ -15,7 +15,7 @@
 	int loginResult = 0;
 	try{
 		Class.forName("com.mysql.cj.jdbc.Driver");		
-		conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","santiago","Vape2018!");
+		conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","root","12345678");
 		
 		String strSQL = "DELETE FROM usuarios WHERE cedula_usuario = ?";
 		PreparedStatement ps = conexion.prepareStatement(strSQL);

@@ -25,7 +25,7 @@
 		int loginResult = 0;
 		try{
 			Class.forName("com.mysql.cj.jdbc.Driver");		
-			conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","santiago","Vape2018!");
+			conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","root","12345678");
 			
 			String strSQL = "INSERT INTO usuarios (cedula_usuario, email_usuario, nombre_usuario, usuario, password)" +
 					"VALUES (?, ?, ?, ?, ?)";
@@ -48,7 +48,7 @@
 		}
 	}
 	else if (boton.equals("2")) {
-		out.println("Estos son los resultados");
+		response.sendRedirect("consultas.html");
 	}
 	else if (boton.equals("3")) {
 		out.println("Usuario Actualizado");	

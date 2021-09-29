@@ -23,7 +23,7 @@
 		out.println("Usuario creado");
 	}
 	else if (boton.equals("2")) {
-		out.println("Estos son los resultados");
+		response.sendRedirect("consultas.html");
 	}
 	else if (boton.equals("3")) {
 		out.println("Usuario Actualizado");	
