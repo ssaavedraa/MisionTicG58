@@ -64,12 +64,12 @@
 			<td><%= result.getString("password") %></td>
 			<td><%= result.getString("usuario") %></td>	
 			</tr>	
-		<%} %>
+		<%i++;} %>
 	</table>
-		<p class="text-danger d-flex justify-content-center" id="banner-success"><%if(i<1){
-			out.println("No se encuentra información"); 
-			response.sendRedirect("usuario.html");
-			}%></p>
+		<%if(i<1){%>
+			<p class="text-danger d-flex justify-content-center" id="banner-success">
+			No se encuentra información
+			</p> <%} %>
 	<% 				
 	} catch (Exception e) {
 		out.println(e);
@@ -77,6 +77,10 @@
 	%>
 	
     </div>
+    
+    <div class="d-flex justify-content-center" style="text-align:center; margin-top: 30px;"> 
+        <a class="btn btn-primary" type="button" href="consultas.html">Volver a consultar</a> 
+    </div> 
     
     
 </body>
