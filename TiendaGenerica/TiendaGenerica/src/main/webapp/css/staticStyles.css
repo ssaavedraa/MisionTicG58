@@ -1,0 +1,37 @@
+footer{
+    margin-top:  30px;
+    color: gray;
+    font-size: 12px;
+    text-align: center;
+}
+
+.btn:hover{
+    background-color: #0d6efd;
+}
+
+.formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}   
+
+.btn{
+    width: 150px;
+    margin: 5px;
+}
+
+#banner-success{
+	margin-top: 30px;
+	padding: 8px;
+    border: solid 2px #198754;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(25, 135, 84, 0.15);
+}
