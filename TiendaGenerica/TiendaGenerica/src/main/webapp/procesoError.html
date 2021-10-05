@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title> Proceso exitoso </title>
+	    <link rel="stylesheet" href="css/staticStyles.css">
+		<link rel="stylesheet" href="css/Bootstrap/bootstrap.css" type="text/css">
+		<script type="text/javascript">
+			function redireccionar(){
+				window.location.href="http://localhost:8080/TiendaGenerica/usuario.html";
+			} 
+			setTimeout ("redireccionar()", 2000); //tiempo expresado en milisegundos
+		</script>
+    </head>
+    <body>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Tienda genérica</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" href="#">Usuarios</a>
+              <a class="nav-link" href="#">Clientes</a>	
+              <a class="nav-link" href="#">Proveedores</a>
+              <a class="nav-link" href="#">Productos</a>
+              <a class="nav-link" href="#">Ventas</a>
+              <a class="nav-link" href="#">Reportes</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="container">
+      	<p class="text-danger d-flex justify-content-center" id="banner-error">¡Error en el proceso!</p>
+      	<p style="font-size: 13px;">Redirigiendo...</p>
+      </div>
+      
+    </body>
+</html>

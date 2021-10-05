@@ -41,17 +41,18 @@
 			if (result == 1) {
 				response.sendRedirect("procesoExitoso.html");			
 			}else{
-				out.println("Usuario no encontrado");
+				response.sendRedirect("procesoError.html");
 			}
 		} catch (Exception e) {
+			response.sendRedirect("procesoError.html");
 			out.println(e);
 		}
 	}
 	else if (boton.equals("2")) {
-		out.println("Estos son los resultados");
+		response.sendRedirect("consulta.html");
 	}
 	else if (boton.equals("3")) {
-		out.println("Usuario Actualizado");	
+		response.sendRedirect("actualizarUsuario.html");
 	}
 	else if (boton.equals("4")) {
 		response.sendRedirect("eliminarUsuario.html");

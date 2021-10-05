@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Actualizar Usuario</title>
 </head>
 <body>
 	<%
@@ -17,20 +17,31 @@
 		Class.forName("com.mysql.cj.jdbc.Driver");		
 		conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/tienda","santiago","Vape2018!");
 		
-		String strSQL = "DELETE FROM usuarios WHERE cedula_usuario = ?";
+		String strSQL = "SELECT * FROM usuarios WHERE cedula_usuario = ?";
 		PreparedStatement ps = conexion.prepareStatement(strSQL);
 		
 		ps.setString(1, cedula);
 		
-		int result = ps.executeUpdate();
-		if (result > 0) {
-			response.sendRedirect("procesoExitoso.html");			
-		}else{
+		ResultSet result = ps.executeQuery();
+		
+		int i = 0;
+		
+		while (result.next()){
+			i++;
+		}
+		
+		if (i == 1){
+			response.sendRedirect("actualizar.html");
+		}
+		else{
+			loginResult = 1;
 			response.sendRedirect("procesoError.html");
 		}
 	} catch (Exception e) {
 		out.println(e);
 	}
+	// insert into usuarios (cedula_usuario, email_usuario, nombre_usuario, password, usuario) values (1020830069, 'santi@go.com', 'santiago', 'Vape2018!', 'ssaavedraa');
+//	response.sendRedirect("usuario.html");
 	%>
 </body>
 </html>
